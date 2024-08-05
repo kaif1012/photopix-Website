@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                photo<span>pi</span>x
+            </div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="icon">
+                <i class="fa fa-search"></i>
+                <a href="#">Login</a>
+            </div>
+        </nav>
+        <section class="h-text">
+            <i class="fa fa-camera" id="camera"></i>
+            <h1 data-aos="fade-up">Capturing the moments that captivate your heart.</h1>
+            <input type="text" name=" " placeholder="search here ...">
+            <button><i class="fa fa-search"></i></button>
+        </section>
+    </header>
+    <section class="filter-gallery">
+        <div class="portfolio-menu">
+            <ul>
+                <li class="active" data-filter="*">All</li>
+                <li data-filter=".nature">Nature</li>
+                <li data-filter=".fashion">Fashion</li>
+                <li data-filter=".wedding">Wedding</li>
+            </ul>
+        </div>
+        <div class="portfolio-item">
+         <div class="item nature" data-aos="flip-left" data-aos-offset="100" data-aos-delay="100">
+        <img src="./nature image/n1.webp" alt="" height="100" width="100">
+        </div>
+        <div class="item fashion" data-aos="flip-left" data-aos-offset="100" data-aos-delay="200">
+        <img src="./nature image/f1.jpg" alt="" height="100" width="100">
+        </div>
+        <div class="item wedding" data-aos="flip-left" data-aos-offset="100" data-aos-delay="300">
+         <img src="./nature image/w1.jpg" alt="" height="100" width="100">
+          </div>
+        <div class="item nature" data-aos="zoom-in" data-aos-offset="100" data-aos-delay="100">
+       <img src="./nature image/n2.jpg" alt="" height="100" width="100">
+         </div>
+          <div class="item fashion" data-aos="zoom-in" data-aos-offset="100" data-aos-delay="200">
+            <img src="./nature image/f2.webp" alt="" height="100" width="100">
+         </div>
+        <div class="item wedding" data-aos="zoom-in" data-aos-offset="100" data-aos-delay="300">
+       <img src="./nature image/w2.jpg" alt="" height="100" width="100">
+      </div>
+      <div class="item nature" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="100">
+        <img src="./nature image/n3.jpg" alt="" height="100" width="100">
+            </div>
+            <div class="item fashion" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="200">
+                <img src="./nature image/f3.webp" alt="" height="100" width="100">
+                </div>
+                <div class="item wedding" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="300">
+                    <img src="./nature image/w3.jpg" alt="" height="100" width="100">
+                    </div>
+                    <div class="item nature" data-aos="zoom-in-down" data-aos-offset="100" data-aos-delay="100">
+                        <img src="./nature image/n4.jpg" alt="" height="100" width="100">
+                        </div>
+                        <div class="item fashion" data-aos="zoom-in-down" data-aos-offset="100" data-aos-delay="200">
+                            <img src="./nature image/f4.jpg" alt="" height="100" width="100">
+                            </div>
+                            <div class="item wedding" data-aos="zoom-in-down" data-aos-offset="100" data-aos-delay="300">
+                                <img src="./nature image/w4.jpg" alt="" height="100" width="100">
+                                </div>
+                                <div class="item nature" data-aos="zoom-out" data-aos-offset="100" data-aos-delay="100" >
+                                    <img src="./nature image/n5.jpg" alt="" height="100" width="100">
+                                    </div>
+                                    <div class="item fashion" data-aos="zoom-out" data-aos-offset="100" data-aos-delay="200" >
+                                        <img src="./nature image/f5.jpg" alt="" height="100" width="100">
+                                        </div>
+                                        <div class="item wedding" data-aos="zoom-out" data-aos-offset="100" data-aos-delay="300" >
+                                            <img src="./nature image/w5.webp" alt="" height="100" width="100">
+                                            </div>
+    </div>
+
+    </section>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script> 
+    $('.portfolio-item').isotope({
+        // options
+        itemSelector: '.item',
+        layoutMode: 'fitRows'
+      });
+            $('.portfolio-menu ul li').click(function(){
+            $('.portfolio-menu ul li').removeClass('active');
+            $(this).addClass('active');  
+            
+            var selector = $(this).attr('data-filter');
+            $('.portfolio-item').isotope({
+                filter:selector
+            });
+            return false;
+            });            
+             
+
+    </script>
+
+    
+
+   <section class="member">
+        <div class="member-info" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="100">
+            <h1>Our <span>Information</span>
+            </h1>
+            <p>What our member says</p>
+        </div>
+        <div class="member-card" data-aos="zoom-in-down" data-aos-offset="100" data-aos-delay="200">
+           <img src="./nature image/i2.jpg" alt=""> 
+            <p>Fashion is most often thought of as a global industry that is invested in anticipating what we wear and how we wish to appear to others.
+                Nature is home to many different creatures. All living organisms benefit from the natural balance maintained by Mother Nature.
+                Marriage, also called matrimony or wedlock, is a culturally and often legally recognised union between people called spouses.  </p>
+                <h2>* Maria Sharapova</h2>
+                <img src="./nature image/icon1.jpg" alt="" width="100">
+                <img src="./nature image/icon5.png" alt="" width="100">
+                <img src="./nature image/icon6.jpg" alt="" width="100">
+                <img src="./nature image/icon4.png" alt="" width="100">
+        </div>
+        <div class="m-images" data-aos="zoom-in" data-aos-offset="100" data-aos-delay="300">
+            <img src="./nature image/a1.jpg" alt="">
+            <img src="./nature image/a2.jpg" alt="">
+            <img src="./nature image/a3.jpg" alt="">
+            <img src="./nature image/a4.jpg" alt="">
+            <img src="./nature image/a5.jpg" alt="">
+            <img src="./nature image/a6.jpg" alt="">
+            <img src="./nature image/a7.jpg" alt="">
+        </div>
+    </section>
+    <footer>
+        <div class="newsletter" data-aos="fade-up" data-aos-offset="200">
+            <div>
+                <h2>Subscribe Our Newsletter</h2>
+                <p>We're a team of non-cynics who truly care for our work.</p>
+            </div>
+            <div class="ntext" data-aos="fade-up-right" data-aos-offset="200" >
+                <label for=""> 
+                    <input type="text" name="" placeholder="Enter your Email">
+                    <button>Subscribe</button>
+                </label>
+             </div>
+        </div>
+        <div class="f-contact" data-aos="zoom-in-up" data-aos-offset="200" >
+        
+            <div>
+                <h1>Information</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, sunt.</p>
+                <i class="fa fa-whatsapp" ></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-telegram"></i>
+                <i class="fa fa-twitter"></i>
+            </div>
+            <div>
+                <h1>Useful links</h1>
+                <p>About us</p>
+                <p>Gallery</p>
+                <p>Blog posts</p>
+                <p>Pricing plans</p>
+            </div>
+            <div>
+                <h1>Help & Support</h1>
+                <p>Privacy policy</p>
+                <p>Term & conditions</p>
+                <p>Technical Support</p>
+                <p>Customer care</p>
+            </div>
+            <div>
+                <h1>Details</h1>
+                <p>Photographers</p>
+                <p>Gallery</p>
+                <p>About</p>
+                <p>Pricing plans</p>
+            </div>
+        </div>
+        <section class="f-s">
+            <p>126 Fourth Avenue, NY 10160, Washington DC, USA| contact: 9373599762 | Email: Kaif90995@gmail.com
+            </p>
+            <p>Copyright <i class="fa fa-copyright"></i> Outdoor Adventure</p>
+        </section>
+    </footer>
+    
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+
+    
+</body>
+</html>
